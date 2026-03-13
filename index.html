@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="google42f16901463e4084" />
+<title>SABC & Co. | Chartered Accountants – Amritsar, Punjab</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0c;
+    --deep-navy: #0d1b2a;
+    --navy: #1a2d45;
+    --navy-mid: #1e3a5f;
+    --navy-light: #2a4a72;
+    --grey-dark: #1c1c22;
+    --grey-mid: #2e2e38;
+    --grey: #4a4a5a;
+    --grey-light: #7a7a8c;
+    --grey-muted: #a0a0b0;
+    --silver: #c8c8d8;
+    --white: #f0f0f5;
+    --accent: #7eb8d4;
+    --accent-gold: #b8975a;
+    --border: rgba(120,140,170,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 5%;
+    background: rgba(10,10,12,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-muted);
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.55rem 1.4rem;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--black); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 10rem 5% 6rem;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(26,45,69,0.6) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(13,27,42,0.8) 0%, transparent 60%),
+      linear-gradient(135deg, #0a0a0c 0%, #0d1b2a 50%, #0a0a0c 100%);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(126,184,212,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(126,184,212,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-line {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(126,184,212,0.3), transparent);
+    top: 35%;
+    animation: scanline 6s ease-in-out infinite;
+  }
+  @keyframes scanline {
+    0%, 100% { opacity: 0; top: 30%; }
+    50% { opacity: 1; top: 70%; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    animation: fadeUp 0.8s 0.15s ease both;
+  }
+  .hero-title strong {
+    font-weight: 700;
+    display: block;
+    color: var(--white);
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--grey-muted);
+    line-height: 1.7;
+    margin: 1.8rem 0 2.8rem;
+    max-width: 520px;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.45s ease both;
+  }
+  .btn-primary {
+    background: var(--navy-light);
+    color: var(--white);
+    border: 1px solid var(--navy-light);
+    padding: 0.9rem 2.4rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .btn-primary:hover { background: var(--navy-mid); border-color: var(--accent); }
+  .btn-outline {
+    background: transparent;
+    color: var(--silver);
+    border: 1px solid var(--border);
+    padding: 0.9rem 2.4rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    z-index: 2;
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.8s 0.6s ease both;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--accent); }
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-light);
+    margin-top: 0.4rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 7rem 5%; }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .section-title strong { font-weight: 700; }
+  .section-desc {
+    font-size: 0.98rem;
+    color: var(--grey-muted);
+    line-height: 1.75;
+    max-width: 560px;
+  }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--grey-dark); }
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .service-card {
+    background: var(--grey-dark);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.3s;
+  }
+  .service-card:hover { background: var(--navy); }
+  .service-card:hover::before { height: 100%; }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(126,184,212,0.1);
+    line-height: 1;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+  }
+  .service-card:hover .service-num { color: rgba(126,184,212,0.25); }
+  .service-icon {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+  .service-desc {
+    font-size: 0.88rem;
+    color: var(--grey-muted);
+    line-height: 1.7;
+  }
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .service-card:hover .service-link { opacity: 1; }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-box {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--deep-navy) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-img-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(126,184,212,0.03) 40px,
+        rgba(126,184,212,0.03) 41px
+      );
+  }
+  .about-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: var(--navy-light);
+    border: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    z-index: 2;
+  }
+  .about-badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .about-badge-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--silver);
+    margin-top: 0.3rem;
+  }
+  .about-accent-line {
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    width: 80px;
+    height: 80px;
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+  }
+  .about-content { }
+  .about-list {
+    margin: 2rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.92rem;
+    color: var(--grey-muted);
+    line-height: 1.6;
+  }
+  .about-list li::before {
+    content: '—';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+  .icai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--grey-dark);
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.4rem;
+    margin-top: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--silver);
+  }
+  .icai-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ─── WHY US ─── */
+  #why {
+    background: var(--deep-navy);
+    text-align: center;
+  }
+  .why-header { margin-bottom: 4rem; }
+  .why-header .section-label { justify-content: center; }
+  .why-header .section-label::before { display: none; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .why-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    padding: 2.5rem 1.8rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .why-card:hover {
+    border-color: rgba(126,184,212,0.35);
+    transform: translateY(-4px);
+  }
+  .why-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  .why-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.7rem;
+  }
+  .why-text {
+    font-size: 0.86rem;
+    color: var(--grey-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── PROCESS ─── */
+  #process { background: var(--black); }
+  .process-header { margin-bottom: 4rem; }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 2.2rem;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent), rgba(126,184,212,0.3));
+    z-index: 0;
+  }
+  .step {
+    position: relative;
+    padding: 0 1.5rem;
+    text-align: center;
+    z-index: 1;
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    background: var(--navy-light);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 auto 1.5rem;
+  }
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .step-text {
+    font-size: 0.82rem;
+    color: var(--grey-muted);
+    line-height: 1.65;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials { background: var(--grey-dark); }
+  .testimonials-header { margin-bottom: 4rem; }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .tcard {
+    background: var(--black);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+  }
+  .tcard::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+  .tcard-text {
+    font-size: 0.92rem;
+    color: var(--grey-muted);
+    line-height: 1.75;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+  .tcard-author {
+    margin-top: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .tcard-avatar {
+    width: 42px;
+    height: 42px;
+    background: var(--navy-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .tcard-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+  .tcard-role {
+    font-size: 0.78rem;
+    color: var(--grey-light);
+    margin-top: 0.2rem;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--deep-navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .contact-info { }
+  .contact-details {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  .contact-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(126,184,212,0.1);
+    border: 1px solid rgba(126,184,212,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .contact-item-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+  .contact-item-val {
+    font-size: 0.92rem;
+    color: var(--silver);
+    line-height: 1.5;
+  }
+  .contact-form { }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-light);
+    margin-bottom: 0.5rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.9rem 1.1rem;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.25s;
+    resize: none;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--grey); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--accent); }
+  .form-group select option { background: var(--grey-dark); }
+  .btn-submit {
+    width: 100%;
+    background: var(--navy-light);
+    color: var(--white);
+    border: 1px solid var(--navy-light);
+    padding: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s;
+    margin-top: 0.5rem;
+  }
+  .btn-submit:hover { background: var(--accent); border-color: var(--accent); color: var(--black); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    border-top: 1px solid var(--border);
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--grey);
+  }
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .footer-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    #about, #contact {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      padding: 4rem 5%;
+    }
+    .hero-stats {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .process-steps {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .process-steps::before { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero { padding: 8rem 5% 5rem; }
+    footer { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .process-steps { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">SABC <span>&</span> Co.</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Consultation</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">SABC & Co. · Chartered Accountants · Amritsar, Punjab</div>
+    <h1 class="hero-title">
+      Financial Clarity.<br>
+      <strong>Strategic Confidence.</strong>
+      <em>Trusted Expertise.</em>
+    </h1>
+    <p class="hero-sub">
+      A full-service CA firm delivering precision in taxation, audit, and financial advisory. Serving businesses and individuals across Punjab with integrity for over 22 years.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#contact" class="btn-outline">Get Free Consultation</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">22<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500<span>+</span></div>
+        <div class="stat-label">Clients Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">98<span>%</span></div>
+        <div class="stat-label">Client Retention</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Our <strong>Core Services</strong></h2>
+    </div>
+    <p class="section-desc">Comprehensive financial and compliance solutions tailored for businesses, professionals, and individuals in Amritsar and across Punjab.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">📊</div>
+      <div class="service-name">ITR & Tax Filing</div>
+      <div class="service-desc">Accurate and timely income tax return filing for individuals, HUFs, firms, and corporates. Tax planning to maximize savings legally.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">🧾</div>
+      <div class="service-name">GST Registration & Returns</div>
+      <div class="service-desc">End-to-end GST services — registration, monthly/quarterly return filing, GST audit, and compliance advisory.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">🏛️</div>
+      <div class="service-name">Audit & Assurance</div>
+      <div class="service-desc">Statutory, internal, tax and concurrent audits conducted with professional diligence and regulatory adherence.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon">🏢</div>
+      <div class="service-name">Company Registration & MCA</div>
+      <div class="service-desc">Pvt. Ltd., LLP, OPC, and partnership firm registration with complete MCA compliance and ROC filings.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-icon">💼</div>
+      <div class="service-name">Business Advisory</div>
+      <div class="service-desc">Financial planning, budgeting, cash flow management, and strategic advisory for growing businesses.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-icon">⚖️</div>
+      <div class="service-name">TDS & Payroll Compliance</div>
+      <div class="service-desc">TDS computation, filing, and certificates. Complete payroll processing with PF, ESI, and professional tax compliance.</div>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual">
+    <div class="about-accent-line"></div>
+    <div class="about-img-box">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:rgba(126,184,212,0.15);line-height:1;">SABC</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(126,184,212,0.3);margin-top:0.5rem;">&amp; Co.</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-badge">
+      <div class="about-badge-num">ICAI</div>
+      <div class="about-badge-text">Registered Firm</div>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="section-label">Who We Are</div>
+    <h2 class="section-title">SABC <strong>&amp; Co.</strong> —<br>Built on Trust</h2>
+    <p class="section-desc">Established in Amritsar, SABC & Co. is a distinguished CA firm with over 22 years of excellence in taxation, audit, and financial advisory — serving businesses and individuals across Punjab and beyond.</p>
+
+    <ul class="about-list">
+      <li>22+ years of deep expertise in taxation, audit, and corporate law</li>
+      <li>Personalized attention to every client — from startups to large enterprises</li>
+      <li>Proactive advisory that goes beyond compliance, driving real business growth</li>
+      <li>Transparent fee structure with no hidden costs</li>
+      <li>Multilingual team fluent in English, Hindi, and Punjabi</li>
+    </ul>
+
+    <div class="icai-badge">
+      <div class="icai-dot"></div>
+      ICAI Registered · FRN Available on Request
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners" style="background:var(--grey-dark);padding:7rem 5%;">
+  <div style="text-align:center;margin-bottom:4rem;">
+    <div class="section-label" style="justify-content:center;"><span style="display:none"></span>Our Partners</div>
+    <h2 class="section-title">Meet the <strong>Leadership</strong></h2>
+    <p class="section-desc" style="margin:0.8rem auto 0;text-align:center;">Five seasoned Chartered Accountants bringing decades of combined expertise across every domain of finance and compliance.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;">
+
+    <div style="background:var(--black);border:1px solid var(--border);padding:2.2rem 1.6rem;text-align:center;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(126,184,212,0.4)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(120,140,170,0.15)';this.style.transform='translateY(0)'">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--navy-light),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--accent);">AG</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;">CA Aditya Gandhi</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">Partner</div>
+    </div>
+
+    <div style="background:var(--black);border:1px solid var(--border);padding:2.2rem 1.6rem;text-align:center;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(126,184,212,0.4)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(120,140,170,0.15)';this.style.transform='translateY(0)'">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--navy-light),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--accent);">SC</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;">CA Sandeep Chopra</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">Senior Partner</div>
+    </div>
+
+    <div style="background:var(--black);border:1px solid var(--border);padding:2.2rem 1.6rem;text-align:center;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(126,184,212,0.4)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(120,140,170,0.15)';this.style.transform='translateY(0)'">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--navy-light),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--accent);">RC</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;">CA Ridham Chopra</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">Partner</div>
+    </div>
+
+    <div style="background:var(--black);border:1px solid var(--border);padding:2.2rem 1.6rem;text-align:center;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(126,184,212,0.4)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(120,140,170,0.15)';this.style.transform='translateY(0)'">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--navy-light),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--accent);">SS</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;">CA Satvir Singh</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">Senior Partner</div>
+    </div>
+
+    <div style="background:var(--black);border:1px solid var(--border);padding:2.2rem 1.6rem;text-align:center;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(126,184,212,0.4)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='rgba(120,140,170,0.15)';this.style.transform='translateY(0)'">
+      <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--navy-light),var(--navy));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--accent);">SA</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;">CA Sanjay Arora</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">Senior Partner</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-header">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">The <strong>Difference</strong> We Bring</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🎯</div>
+      <div class="why-title">Precision First</div>
+      <div class="why-text">Every filing, return, and report is reviewed with meticulous attention to detail to ensure zero errors.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <div class="why-title">Fast Turnaround</div>
+      <div class="why-text">We respect your deadlines. Most standard filings are completed well ahead of due dates.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔒</div>
+      <div class="why-title">Confidentiality</div>
+      <div class="why-text">Your financial data is handled with the highest level of security and professional discretion.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📱</div>
+      <div class="why-title">Always Accessible</div>
+      <div class="why-text">Reach us via phone, WhatsApp, or email. We respond to all queries within 24 hours.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Simple <strong>4-Step</strong> Process</h2>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Free Consultation</div>
+      <div class="step-text">Book a free call to discuss your financial needs, requirements, and goals.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Document Collection</div>
+      <div class="step-text">We guide you on exactly what documents are needed — simple and hassle-free.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Processing & Filing</div>
+      <div class="step-text">Our team handles everything with precision and compliance.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Delivery & Support</div>
+      <div class="step-text">Receive your documents with ongoing support for any queries.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's <strong>Talk</strong><br>Finances</h2>
+    <p class="section-desc">Schedule a free consultation today. We're here to answer all your financial and compliance questions.</p>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-item-label">Office Address</div>
+          <div class="contact-item-val">SABC & Co., Chartered Accountants<br>SCO 104, B Block, Ranjit Avenue,<br>Near Bhrawan Da Dhaba, 5th Floor,<br>Amritsar, Punjab – 143001</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-item-label">Phone / WhatsApp</div>
+          <div class="contact-item-val">+91 85914 77105</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <div class="contact-item-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28b8c848da281838391918d818b83968791cc8b8c">[email&#160;protected]</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕒</div>
+        <div>
+          <div class="contact-item-label">Office Hours</div>
+          <div class="contact-item-val">Mon – Sat: 9:30 AM – 6:30 PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label>Service Required</label>
+      <select>
+        <option value="">Select a service...</option>
+        <option>ITR & Tax Filing</option>
+        <option>GST Registration & Returns</option>
+        <option>Audit & Assurance</option>
+        <option>Company Registration & MCA</option>
+        <option>Business Advisory</option>
+        <option>TDS & Payroll Compliance</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea rows="4" placeholder="Briefly describe your requirement..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="alert('Thank you! We will contact you within 24 hours.')">Send Message →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SABC <span>&</span> Co.</div>
+  <div class="footer-copy">© 2025 SABC & Co. Chartered Accountants. All rights reserved. Amritsar, Punjab.</div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></
